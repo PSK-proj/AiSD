@@ -17,11 +17,11 @@ Każdy etap pracy zostanie zawarty w sprawozdaniu.
 - [x] Stworzenie harmonogramu w narzędziu Trello,
 - [x] Przygotowanie środowiska programistycznego „Visual Studio 2022”,
 - [x] Przygotowanie repozytorium w serwisie „GitHub”,
-- [ ] Stworzenie algorytmu sortowania bąbelkowego,
-- [ ] Testowanie poprawności działania algorytmu,
-- [ ] Stworzenie algorytmu sortowania Quicksort,
-- [ ] Testowanie poprawności działania algorytmu,
-- [ ] Przygotowanie sprawozdania z postępów prac nad projektem.
+- [x] Stworzenie algorytmu sortowania bąbelkowego,
+- [x] Testowanie poprawności działania algorytmu,
+- [x] Stworzenie algorytmu sortowania Quicksort,
+- [x] Testowanie poprawności działania algorytmu,
+- [x] Przygotowanie sprawozdania z postępów prac nad projektem.
 
 ### Drugi kamień milowy
 
