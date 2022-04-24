@@ -5,6 +5,7 @@
 #include <string.h>
 
 #include "sort.h"
+#include "menu.h"
 
 void display_sorted(int n, int* p, int* q)
 {
@@ -47,10 +48,12 @@ void load_quantity(int* n)
 int main()
 {
     system("CHCP 1250 >NUL"); //polskie znaki w konsoli
+    system("mode 150,40");
 
-    short mode; //? 1XX-rêczny, 2XX-generowanie, X0X-bez_pliku, X1X-z_plikiem, XX0-bez_czasu, XX1-z_czasem
+    unsigned short mode; //? 1XX-rêczny, 2XX-generowanie, X0X-bez_pliku, X1X-z_plikiem, XX0-bez_czasu, XX1-z_czasem, 777 - exit
     unsigned int quantity; //iloœæ liczb
 
+    menu_main(&mode);
 
     // ALOKOWANIE TABLIC DYNAMICZNYCH
     load_quantity(&quantity);
