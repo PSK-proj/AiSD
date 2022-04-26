@@ -25,12 +25,12 @@ Każdy etap pracy zostanie zawarty w sprawozdaniu.
 
 ### Drugi kamień milowy
 
-- [ ] Stworzenie menu głównego programu w konsoli,
+- [X] Stworzenie menu głównego programu w konsoli,
 - [ ] Rozwijanie funkcjonalności skryptów i menu,
-- [ ] Implementacja pomiarów czasów działania algorytmów,
+- [X] Implementacja pomiarów czasów działania algorytmów,
 - [ ] Podpięcie algorytmów do skryptu menu,
-- [ ] Interakcja z użytkownikiem, mechanizm podejmowania decyzji
-- [ ] Generowanie losowych liczb do posortowania,
+- [X] Interakcja z użytkownikiem, mechanizm podejmowania decyzji
+- [X] Generowanie losowych liczb do posortowania,
 - [ ] Zapis danych i wyników do pliku,
 - [ ] Wprowadzenie poprawek wizualnych,
 - [ ] Testy poprawności działania,
