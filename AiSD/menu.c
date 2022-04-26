@@ -11,7 +11,7 @@
 
 void menu_main(unsigned short *mode)
 {
-	unsigned char choice, exit;
+	unsigned char choice = 0, exit;
 	do
 	{
 		exit = 1;
@@ -61,4 +61,3 @@ void menu_main(unsigned short *mode)
 
 	} while (!exit);
 }
-
