@@ -8,7 +8,7 @@
 #include "menu.h"
 #include "Timer.h"
 
-// MANUAL
+
 void manual_data_load(int n, int* p, int* q)
 {
     printf("Podaj liczby: \n");
@@ -19,8 +19,7 @@ void manual_data_load(int n, int* p, int* q)
     }
     memcpy(q, p, n * sizeof(int));
 }
-// ---------------------------------------------------
-// AUTO
+
 int auto_data_load(int n, int* p, int* q)
 {
     int max, min;
@@ -43,7 +42,7 @@ int auto_data_load(int n, int* p, int* q)
         return 1;
     return 0;
 }
-// A - czasy
+
 void stress_test(int n, int* p, int* q, unsigned int iterations, double* avg_bubble, double* avg_quick)
 {
     int* p_copy = (int*)malloc(n * sizeof(int));
@@ -126,7 +125,7 @@ void load_iterations(int* iterations)
     } while (temp <= 0);
     *iterations = temp;
 }
-// A - plik
+
 void file_handling(int n, int* p, int* q, unsigned short mode, unsigned short* f_w_c, unsigned short* f_d_c, double avg_b, double avg_q)
 {
     FILE* fp;
@@ -179,7 +178,7 @@ void file_handling(int n, int* p, int* q, unsigned short mode, unsigned short* f
         fclose(fp);
     }
 }
-// ---------------------------------------------------
+
 void display_sorted(int n, int* p, int* q)
 {
     printf("\nPosortowane b¹belkowo: \n");
@@ -257,7 +256,7 @@ int main()
             menu_header();
             // wszsytko
             printf("AUTOMATYCZNE GENEROWANIE LICZB (zapis do pliku i testy wydajnoœci)\n");
-            printf("------------------------------\n\n");
+            printf("------------------------------------------------------------------\n\n");
             load_quantity(&quantity);
             p = allocate_memory(quantity);
             q = allocate_memory(quantity);
@@ -280,7 +279,7 @@ int main()
         {
             menu_header();
             printf("AUTOMATYCZNE GENEROWANIE LICZB (zapis do pliku)\n");
-            printf("------------------------------\n\n");
+            printf("-----------------------------------------------\n\n");
             load_quantity(&quantity);
             p = allocate_memory(quantity);
             q = allocate_memory(quantity);
@@ -297,7 +296,7 @@ int main()
         {
             menu_header();
             printf("AUTOMATYCZNE GENEROWANIE LICZB (testy wydajnoœci)\n");
-            printf("------------------------------\n\n");
+            printf("-------------------------------------------------\n\n");
             load_quantity(&quantity);
             p = allocate_memory(quantity);
             q = allocate_memory(quantity);
