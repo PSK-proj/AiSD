@@ -254,7 +254,6 @@ int main()
         else if (mode == 211)
         {
             menu_header();
-            // wszsytko
             printf("AUTOMATYCZNE GENEROWANIE LICZB (zapis do pliku i testy wydajnoœci)\n");
             printf("------------------------------------------------------------------\n\n");
             load_quantity(&quantity);

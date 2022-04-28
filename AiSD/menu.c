@@ -1,4 +1,7 @@
-﻿void menu_header()
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+void menu_header()
 {
 	system("cls");
 	printf("                   __          __        __   __   __  ___               __      __        __   __        ___  __   __   __  ___                  \n");

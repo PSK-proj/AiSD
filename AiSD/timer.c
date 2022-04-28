@@ -1,6 +1,7 @@
 #ifndef Timer
 #define Timer
 #include <windows.h>
+#include <stdio.h>
 
 
 double PCFreq = 0.0;

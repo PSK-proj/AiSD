@@ -1,7 +1,7 @@
 void bubblesort(int tab[], int size)
 {
 	int temp;
-	for (int i = 0; i < size - 1; i++) //metoda podstawowa - bez optymalizacji dla tablic czêœciowo posortowanych
+	for (int i = 0; i < size - 1; i++)
 	{
 		for (int j = 0; j < size - 1 - i; j++)
 		{
@@ -15,7 +15,7 @@ void bubblesort(int tab[], int size)
 	}
 }
 
-void quicksort(int tab[], int first, int last) //metoda Nico Lomuto
+void quicksort(int tab[], int first, int last)
 {
 	int i = first - 1;
 	int temp;
