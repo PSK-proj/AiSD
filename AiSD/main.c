@@ -66,7 +66,7 @@ void stress_test(int n, int* p, int* q, unsigned int iterations, double* avg_bub
             czas_alg = GetCounter();
         }
 
-        if (iterations < 6 && (n > 250 || n < 50))
+        if (iterations < 6 && (n > 201 || n < 50))
             printf("%u. B¹belkowy: %lf ms\n", i + 1, czas_alg);
         sum_bubble += czas_alg;
     }
@@ -88,7 +88,7 @@ void stress_test(int n, int* p, int* q, unsigned int iterations, double* avg_bub
             czas_alg = GetCounter();
         }
 
-        if(iterations < 6 && (n > 250 || n < 50))
+        if(iterations < 6 && (n > 201 || n < 50))
             printf("%u. Quicksort: %lf ms\n", i+1, czas_alg);
         sum_quick += czas_alg;
     }
