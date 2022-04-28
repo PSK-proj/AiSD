@@ -26,15 +26,15 @@ Każdy etap pracy zostanie zawarty w sprawozdaniu.
 ### Drugi kamień milowy
 
 - [X] Stworzenie menu głównego programu w konsoli,
-- [ ] Rozwijanie funkcjonalności skryptów i menu,
+- [X] Rozwijanie funkcjonalności skryptów i menu,
 - [X] Implementacja pomiarów czasów działania algorytmów,
-- [ ] Podpięcie algorytmów do skryptu menu,
+- [X] Podpięcie algorytmów do skryptu menu,
 - [X] Interakcja z użytkownikiem, mechanizm podejmowania decyzji
 - [X] Generowanie losowych liczb do posortowania,
-- [ ] Zapis danych i wyników do pliku,
-- [ ] Wprowadzenie poprawek wizualnych,
-- [ ] Testy poprawności działania,
-- [ ] Przygotowanie sprawozdania z postępów prac nad projektem.
+- [X] Zapis danych i wyników do pliku,
+- [X] Wprowadzenie poprawek wizualnych,
+- [X] Testy poprawności działania,
+- [X] Przygotowanie sprawozdania z postępów prac nad projektem.
 
 ### I termin
 
