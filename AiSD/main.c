@@ -8,7 +8,22 @@
 #include "menu.h"
 #include "Timer.h"
 
+/**
+ * \file   main.h
+ * \brief
+ * Glowna funkcja programu
+ * \author Piotr Miernik, Oskar Olub
+ * \date   Maj 2022
+ *********************************************************************/
 
+/// <summary>
+/// Reczne wczytywanie danych.
+/// 
+/// Ta funkcja obsluguje zapisywanie do tablicy liczb podanych recznie przez uzytkownika.
+/// </summary>
+/// <param name="n">Ilosc elementow w tablicy</param>
+/// <param name="p">Wskaznik na tablice do sortowania babelkowego</param>
+/// <param name="q">Wskaznik na tablice do sortowania Quicksort</param>
 void manual_data_load(int n, int* p, int* q)
 {
     printf("Podaj liczby: \n");
@@ -20,6 +35,15 @@ void manual_data_load(int n, int* p, int* q)
     memcpy(q, p, n * sizeof(int));
 }
 
+/// <summary>
+/// Automatyczne wczytywanie danych.
+/// 
+/// Ta funkcja obsluguje zapisywanie do tablicy liczb losowanych z podanego przez uzytkownika zakresu.
+/// </summary>
+/// <param name="n">Ilosc elementow w tablicy</param>
+/// <param name="p">Wskaznik na tablice do sortowania babelkowego</param>
+/// <param name="q">Wskaznik na tablice do sortowania Quicksort</param>
+/// <returns>Flaga uzycia dlugiej liczby. Funkcja zwraca "1", jesli liczba graniczna zakresu losowania zajmuje 5 lub wiecej znakow. W przeciwnym wypadku zwacana jest wartosc "0"</returns>
 int auto_data_load(int n, int* p, int* q)
 {
     int max, min;
@@ -43,6 +67,17 @@ int auto_data_load(int n, int* p, int* q)
     return 0;
 }
 
+/// <summary>
+/// Testy wydajnosci.
+/// 
+/// Ta funkcja odpowiada za przeprowadzenie testow predkosci sortowan.
+/// </summary>
+/// <param name="n">Ilosc elementow w tablicy</param>
+/// <param name="p">Wskaznik na tablice do sortowania babelkowego</param>
+/// <param name="q">Wskaznik na tablice do sortowania Quicksort</param>
+/// <param name="iterations">Ilosc powtorzen testow czasu sortowania</param>
+/// <param name="avg_bubble">Wskaznik na zmienna przechowujaca sredni czas sortowania babelkowego</param>
+/// <param name="avg_quick">Wskaznik na zmienna przechowujaca sredni czas sortowania Quicksort</param>
 void stress_test(int n, int* p, int* q, unsigned int iterations, double* avg_bubble, double* avg_quick)
 {
     int* p_copy = (int*)malloc(n * sizeof(int));
@@ -100,6 +135,13 @@ void stress_test(int n, int* p, int* q, unsigned int iterations, double* avg_bub
     free(q_copy);
 }
 
+/// <summary>
+/// Porownanie czasow sortowan.
+/// 
+/// Ta funkcja porownuje ze soba srednie czasy osiagniete przez funkcje sortujace i wyswietla werdykt.
+/// </summary>
+/// <param name="avg_bubble">Sredni czas sortowania babelkowego</param>
+/// <param name="avg_quick">Sredni czas sortowania Quicksort</param>
 void compare_times(double avg_bubble, double avg_quick)
 {
     double diff = avg_bubble - avg_quick;
@@ -112,6 +154,12 @@ void compare_times(double avg_bubble, double avg_quick)
 
 }
 
+/// <summary>
+/// Wczytanie ilosci pomiarow testow czasu.
+/// 
+/// Ta funkcja odpowiada za pobranie od uzytkownika ilosci pomiarow, ktore program ma wykonac.
+/// </summary>
+/// <param name="iterations">Wskaznik na zmienna przechowujaca ilosc pomiarow</param>
 void load_iterations(int* iterations)
 {
     int temp;
@@ -126,6 +174,19 @@ void load_iterations(int* iterations)
     *iterations = temp;
 }
 
+/// <summary>
+/// Obsluga plikow tekstowych.
+/// 
+/// Funkcja ta jest odpowiedzialna za wszelka obsluge plikow tekstowych. Tworzy plik, jesli takowy nie istnieje, nadpisuje stary plik oraz dopisuje dane do aktywnego pliku w sesji programu.
+/// </summary>
+/// <param name="n">Ilosc elementow w tablicy</param>
+/// <param name="p">Wskaznik na tablice do sortowania babelkowego</param>
+/// <param name="q">Wskaznik na tablice do sortowania Quicksort</param>
+/// <param name="mode">Tryb pracy programu wybierany w menu</param>
+/// <param name="f_w_c">Wskaznik na licznik zapisow do pliku (pozwala na sprawdzenie czy bedzie to pierwszy zapis do pliku)</param>
+/// <param name="f_d_c">Wskaznik na licznik zapisanych danych (liczy ilosc operacji wczytywania danych)</param>
+/// <param name="avg_bubble">Sredni czas sortowania babelkowego</param>
+/// <param name="avg_quick">Sredni czas sortowania Quicksort</param>
 void file_handling(int n, int* p, int* q, unsigned short mode, unsigned short* f_w_c, unsigned short* f_d_c, double avg_b, double avg_q)
 {
     FILE* fp;
@@ -179,6 +240,14 @@ void file_handling(int n, int* p, int* q, unsigned short mode, unsigned short* f
     }
 }
 
+/// <summary>
+/// Wyswietlanie posortowanych tablic.
+/// 
+/// Funkcja ta wyswietla posortowane tablice.
+/// </summary>
+/// <param name="n">Wielkosc tablicy</param>
+/// <param name="p">Tablica elementow posortowanych babelkowo</param>
+/// <param name="q">Tablica elementow posortowanych Quicksortem</param>
 void display_sorted(int n, int* p, int* q)
 {
     printf("\nPosortowane b¹belkowo: \n");
@@ -191,6 +260,12 @@ void display_sorted(int n, int* p, int* q)
     printf("\n");
 }
 
+/// <summary>
+/// Wczytywanie wielkosci tablicy.
+/// 
+/// Funkcja ta odpowiada za pobranie od uzytkownika oczekiwanej przez niego ilosci liczb do posortowania.
+/// </summary>
+/// <param name="n">Wskaznik na zmienna przechowujaca wielkosc tablicy</param>
 void load_quantity(int* n)
 {
     int temp;
@@ -204,12 +279,22 @@ void load_quantity(int* n)
     *n = temp;
 }
 
+/// <summary>
+/// Tworzenie tablicy donamicznej.
+/// 
+/// Funkcja ta jest odpowiedzialna za stworzenie dynamicznej tablicy o dlugosci podanej wczesniej przez uzytkownika. Zwraca ona wskaznik na miejsce w pamieci, ktore zostalo dla niej zaalokowane.
+/// </summary>
+/// <param name="n">Dlugosc tablicy</param>
+/// <returns>Wskaznik na miejsce w pamieci, gdzie tablica zostala utowrzona</returns>
 int *allocate_memory(int n)
 {
     int* ptr = (int*)malloc(n * sizeof(int));
     return ptr;
 }
 
+/// <summary>
+/// Glowna funkcja programu.
+/// </summary>
 int main()
 {
     system("CHCP 1250 >NUL");
