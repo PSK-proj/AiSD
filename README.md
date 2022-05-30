@@ -38,7 +38,7 @@ Każdy etap pracy zostanie zawarty w sprawozdaniu.
 
 ### I termin
 
-- [ ] Dodanie ewentualnych ulepszeń,
-- [ ] Optymalizacja programu i poprawienie błędów,
-- [ ] Sporządzenie sprawozdania,
-- [ ] Stworzenie dokumentacji w programie Doxygen.
+- [X] Dodanie ewentualnych ulepszeń,
+- [X] Optymalizacja programu i poprawienie błędów,
+- [X] Sporządzenie sprawozdania,
+- [X] Stworzenie dokumentacji w programie Doxygen.
